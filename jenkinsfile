@@ -12,5 +12,11 @@ pipeline {
                 sh 'ip a'
             }
         }
+        stage('Copy'){
+            steps {
+                sh 'ls -l'
+                sh 'cp index.html /var/www/html'
+            }
+        }
     }
 }
